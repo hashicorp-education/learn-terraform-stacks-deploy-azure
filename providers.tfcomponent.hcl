@@ -26,6 +26,7 @@ provider "azurerm" "configurations" {
       }
     }
 
+    environment     = "public"
     use_cli         = false
     use_oidc        = true
     oidc_token      = var.identity_token
