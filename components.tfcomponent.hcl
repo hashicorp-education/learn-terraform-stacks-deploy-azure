@@ -11,7 +11,7 @@ component "resource_group" {
   }
 
   providers = {
-    azure    = provider.azure.configurations[each.value]
+    azurerm  = provider.azure.configurations[each.value]
     random   = provider.random.this
   }
 }
@@ -27,7 +27,7 @@ component "storage" {
   }
 
   providers = {
-    azure    = provider.azure.configurations[each.value]
+    azurerm  = provider.azure.configurations[each.value]
     random   = provider.random.this
   }
 }
@@ -46,7 +46,7 @@ component "function" {
   }
 
   providers = {
-    azurerm     = provider.azurerm.configurations[each.value]
+    azurerm = provider.azurerm.configurations[each.value]
     archive = provider.archive.this
     random  = provider.random.this
   }
