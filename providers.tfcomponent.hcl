@@ -28,6 +28,7 @@ provider "azurerm" "configurations" {
 
     use_cli         = false
     use_oidc        = true
+    oidc_token      = var.identity_token
     subscription_id = var.subscription_id
     client_id       = var.client_id
     tenant_id       = var.tenant_id
