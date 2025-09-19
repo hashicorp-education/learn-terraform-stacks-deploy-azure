@@ -1,10 +1,6 @@
 # Copyright (c) HashiCorp, Inc.
 # SPDX-License-Identifier: MPL-2.0
 
-provider "azurerm" {
-  features {}
-}
-
 resource "random_string" "storage_account_name" {
   length  = 8
   lower   = true
@@ -24,6 +20,6 @@ resource "azurerm_storage_account" "function_storage" {
 
 resource "azurerm_storage_container" "function_container" {
   name                  = "function-container"
-  storage_account_id    = azurerm_storage_account.function_storage.id
+  storage_account_name    = azurerm_storage_account.function_storage.name
   container_access_type = "private"
 }

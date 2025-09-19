@@ -28,3 +28,8 @@ variable "resource_group_location" {
   description = "Location of the resource group."
   type        = string
 }
+
+variable "storage_account_primary_connection_string" {
+  description = "Connection string."
+  type        = string
+}

@@ -29,7 +29,7 @@ resource "azurerm_service_plan" "function_plan" {
 }
 
 data "azurerm_storage_account_sas" "function_zip_sas" {
-  connection_string = azurerm_storage_account.function_storage.primary_connection_string
+  connection_string = var.storage_account_primary_connection_string
 
   https_only = true
   start      = timestamp()
