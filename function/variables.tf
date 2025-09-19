@@ -4,14 +4,17 @@
 variable "storage_account_name" {
   description = "Name of the storage account."
   type        = string
-  #  value = azurerm_storage_account.function_storage.name
 }
 
 variable "storage_account_primary_access_key" {
   description = "Access key for the storage account."
   type        = string
   sensitive   = true
-  #azurerm_storage_account.function_storage.primary_access_key  
+}
+
+variable "storage_account_primary_connection_string" {
+  description = "Connection string."
+  type        = string
 }
 
 variable "storage_container_name" {
@@ -26,10 +29,5 @@ variable "resource_group_name" {
 
 variable "resource_group_location" {
   description = "Location of the resource group."
-  type        = string
-}
-
-variable "storage_account_primary_connection_string" {
-  description = "Connection string."
   type        = string
 }

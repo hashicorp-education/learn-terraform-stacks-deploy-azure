@@ -11,8 +11,8 @@ component "resource_group" {
   }
 
   providers = {
-    azurerm  = provider.azurerm.configurations[each.value]
-    random   = provider.random.this
+    azurerm = provider.azurerm.configurations[each.value]
+    random  = provider.random.this
   }
 }
 
@@ -22,7 +22,7 @@ component "storage" {
   source = "./storage"
 
   inputs = {
-    resource_group_name = component.resource_group[each.value].resource_group_name
+    resource_group_name     = component.resource_group[each.value].resource_group_name
     resource_group_location = component.resource_group[each.value].resource_group_location
   }
 
@@ -43,7 +43,7 @@ component "function" {
     storage_container_name = component.storage[each.value].storage_container_name
     resource_group_name = component.resource_group[each.value].resource_group_name
     resource_group_location = component.resource_group[each.value].resource_group_location
-    storage_account_primary_connection_string = component.storage[each.value].primary_connection_string
+    storage_account_primary_connection_string = component.storage[each.value].storage_account_primary_connection_string
   }
 
   providers = {
