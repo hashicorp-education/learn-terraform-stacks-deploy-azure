@@ -14,9 +14,11 @@ output "storage_account_name" {
 output "storage_account_primary_access_key" {
   description = "The primary access key of the storage account."
   value       = azurerm_storage_account.function_storage.primary_access_key
+  sensitive   = true
 }
 
 output "storage_account_primary_connection_string" {
   description = "Storage account connection string"
   value = azurerm_storage_account.function_storage.primary_connection_string
+  sensitive = true
 }
