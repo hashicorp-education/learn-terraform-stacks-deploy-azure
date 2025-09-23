@@ -6,6 +6,10 @@ required_providers {
     source  = "hashicorp/azurerm"
     version = "~> 4.45"
   }
+  random = {
+    source  = "hashicorp/random"
+    version = "~> 3.7.2"
+  }
 }
 
 provider "azurerm" "configurations" {
@@ -27,3 +31,5 @@ provider "azurerm" "configurations" {
     tenant_id       = var.tenant_id
   }
 }
+
+provider "random" "this" {}
