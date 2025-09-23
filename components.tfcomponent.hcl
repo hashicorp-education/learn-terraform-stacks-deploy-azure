@@ -15,3 +15,18 @@ component "resource_group" {
     random  = provider.random.this
   }
 }
+
+component "network" {
+  for_each = var.regions
+
+  source = "./network"
+
+  inputs = {
+    resource_group_name = component.resource_group[each.value].resource_group_name
+    resource_group_location = component.resource_group[each.value].resource_group_location
+  }
+
+  providers = {
+    azurerm = provider.azurerm.configurations[each.value]
+  }
+}

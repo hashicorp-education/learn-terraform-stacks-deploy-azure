@@ -1,10 +1,20 @@
 # Copyright (c) HashiCorp, Inc.
 # SPDX-License-Identifier: MPL-2.0
 
+variable "resource_group_name" {
+  description = "The name of the resource group."
+  type = string
+}
+
+variable "resource_group_location" {
+  description = "The location of the resource group."
+  type = string
+}
+
 variable "vnet_name" {
   description = "Name of the VNET."
   type        = string
-  default     = "stacks-net"
+  default     = "stacks-network"
 }
 
 variable "vnet_cidr" {
