@@ -1,5 +1,5 @@
-resource "azurerm_resource_group" "function" {
-  name     = "function-rg-${random_pet.group_name.id}"
+resource "azurerm_resource_group" "stacks" {
+  name     = "stacks-${random_pet.group_name.id}"
   location = var.region
 }
 
