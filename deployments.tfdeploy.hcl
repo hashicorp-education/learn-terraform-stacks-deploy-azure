@@ -15,6 +15,8 @@ deployment "production" {
     subscription_id = "08fd09b4-a6f5-4d77-979c-53cc488bd179"
     tenant_id       = "53b7328c-caf4-40fb-b84e-04b3f4bcf38f"
   }
+
+  destroy = true
 }
 
 deployment "development" {
@@ -27,4 +29,6 @@ deployment "development" {
     subscription_id = "08fd09b4-a6f5-4d77-979c-53cc488bd179"
     tenant_id       = "53b7328c-caf4-40fb-b84e-04b3f4bcf38f"
   }
+
+  destroy = true
 }
