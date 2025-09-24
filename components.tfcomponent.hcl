@@ -13,6 +13,7 @@ component "resource_group" {
   providers = {
     azurerm = provider.azurerm.configurations[each.value]
     random  = provider.random.this
+    tls     = provider.tls.this
   }
 }
 

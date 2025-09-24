@@ -10,6 +10,10 @@ required_providers {
     source  = "hashicorp/random"
     version = "~> 3.7.2"
   }
+  tls = {
+    source  = "hashicorp/tls"
+    version = "~> 4.1.0"
+  }
 }
 
 provider "azurerm" "configurations" {
@@ -33,3 +37,4 @@ provider "azurerm" "configurations" {
 }
 
 provider "random" "this" {}
+provider "tls" "this" {}
