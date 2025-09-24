@@ -18,6 +18,10 @@ variable "security_group_id" {
   type = string
 }
 
+variable "public_key_openssh" {
+  description = "Public key in OpenSSH format."
+  type = string
+}
 
 variable "instances_per_subnet" {
   description = "Number of instances per private subnet."

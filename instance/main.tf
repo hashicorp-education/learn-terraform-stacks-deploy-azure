@@ -29,11 +29,10 @@ resource "azurerm_linux_virtual_machine" "private" {
     azurerm_network_interface.private[count.index].id
   ]
 
-  # # SSH key instead of AWS key pair
-  # admin_ssh_key {
-  #   username   = var.admin_username
-  #   public_key = file(var.ssh_public_key) # path to your id_rsa.pub
-  # }
+  admin_ssh_key {
+    username   = "ubuntu"
+    public_key = var.public_key_openssh
+  }
 
   os_disk {
     caching              = "ReadWrite"

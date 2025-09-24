@@ -41,6 +41,7 @@ component "instance" {
     resource_group_name = component.resource_group[each.value].resource_group_name
     resource_group_location = component.resource_group[each.value].resource_group_location
     security_group_id = component.network[each.value].allow_ssh_security_group_id
+    public_key_openssh = component.network[each.value].public_key_openssh
   }
 
   providers = {
