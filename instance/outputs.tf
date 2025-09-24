@@ -6,7 +6,6 @@ output "instance_ids" {
   value       = azurerm_linux_virtual_machine.private[*].id
 }
 
-# Private IP addresses of the VMs
 output "private_ips" {
   description = "Private IP addresses of Linux virtual machines."
   value       = [ for nic in azurerm_network_interface.private : nic.ip_configuration[0].private_ip_address ]
