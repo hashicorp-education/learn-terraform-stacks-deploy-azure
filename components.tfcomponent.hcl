@@ -30,3 +30,20 @@ component "network" {
     azurerm = provider.azurerm.configurations[each.value]
   }
 }
+
+component "instance" {
+  for_each = var.regions
+
+  source = "./instance"
+
+  inputs = {
+    subnet_ids = component.network[each.value].private_subnet_ids
+    resource_group_name = component.resource_group[each.value].resource_group_name
+    resource_group_location = component.resource_group[each.value].resource_group_location
+    security_group_id = component.network[each.value].allow_ssh_security_group_id
+  }
+
+  providers = {
+    azurerm = provider.azurerm.configurations[each.value]
+  }
+}
