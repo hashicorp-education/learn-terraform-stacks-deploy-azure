@@ -40,9 +40,9 @@ resource "azurerm_linux_virtual_machine" "private" {
   }
 
   source_image_reference {
-    publisher = "Canonical"
-    offer     = "0001-com-ubuntu-server-noble"
-    sku       = "24_04-lts"
-    version   = "latest"
+  publisher = "Canonical"
+  offer     = "ubuntu-24_04-lts"
+  sku       = "server"
+  version   = "latest"
   }
 }
