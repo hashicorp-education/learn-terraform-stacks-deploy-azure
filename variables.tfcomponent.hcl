@@ -5,8 +5,8 @@ variable "regions" {
   type = set(string)
 }
 
-variable "identity_token" { 
-  type      = string 
+variable "identity_token" {
+  type      = string
   ephemeral = true
 }
 
@@ -15,9 +15,9 @@ variable "subscription_id" {
 }
 
 variable "client_id" {
-  type      = string
+  type = string
 }
 
 variable "tenant_id" {
-  type        = string
+  type = string
 }
