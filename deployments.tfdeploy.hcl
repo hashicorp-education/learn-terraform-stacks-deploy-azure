@@ -11,11 +11,10 @@ deployment "development" {
 
     regions = ["East US"]
 
-    client_id       = "ea561fee-30d7-4b92-9867-1d38781b7c00"
-    subscription_id = "08fd09b4-a6f5-4d77-979c-53cc488bd179"
-    tenant_id       = "53b7328c-caf4-40fb-b84e-04b3f4bcf38f"
+    client_id       = "<YOUR_AZURE_CLIENT_ID>"
+    subscription_id = "<YOUR_AZURE_SUBSCRIPTION_ID>"
+    tenant_id       = "<YOUR_AZURE_TENANT_ID>"
   }
-  destroy = true
 }
 
 deployment "production" {
@@ -24,10 +23,8 @@ deployment "production" {
 
     regions = ["East US", "West US"]
 
-    client_id       = "ea561fee-30d7-4b92-9867-1d38781b7c00"
-    subscription_id = "08fd09b4-a6f5-4d77-979c-53cc488bd179"
-    tenant_id       = "53b7328c-caf4-40fb-b84e-04b3f4bcf38f"
+    client_id       = "<YOUR_AZURE_CLIENT_ID>"
+    subscription_id = "<YOUR_AZURE_SUBSCRIPTION_ID>"
+    tenant_id       = "<YOUR_AZURE_TENANT_ID>"
   }
-
-  destroy = true
 }
